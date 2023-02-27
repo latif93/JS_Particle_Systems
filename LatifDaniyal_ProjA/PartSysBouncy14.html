@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tornado of Squares, Fire, and Rope/Cloth Hybrid</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    	Please use a browser that supports "canvas"
+    </canvas> 
+	<br> 
+	<button type="button" onclick="ImplicitEulerOn()">Implicit "OldGood" (Only For Fire and Tornado)</button>
+	<button type="button" onclick="ExplicitEulerOn()">Explicit Euler</button>
+	<button type="button" onclick="BackEulerOn()">Implicit Back Euler</button> 
+	 <button type="button" onclick="MidpointOn()">Explicit Midpoint</button> 
+		  <button type="button" onclick="MidpointIOn()">Implicit Midpoint</button>
+
+	<b>Particle System Controls:</b> 
+  <br>
+  <b>I, J, K, L:</b> Move Forward, Strafe Left, Move Backward, Strafe Right Respectively. 
+  <b>Arrow Keys:</b> Turn or Look Up Without Moving. 
+ <!---- <b>Space-bar:</b> single-step.   
+  <b>p or P key:</b> pause/resume.	
+	<br>---> 
+  <b>c or C key:</b> toggle clear-screen.  
+  <b>s: </b>blow spring system
+  <b>click and drag: </b>under the special euler solver, manipulate tornado and fire
+
+	<br>
+  <br>
+	
+	<!-- Make 'div' elements to hold changeable HTML made in our JavaScript file;
+		 (where? look at the end of 'BouncyBall03.js' at 
+			myKeyPress(), myKeyDown() and myKeyUp() fcns)
+	-->
+
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/webgl-debug.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+	<!-- We modified the library cuon-matrix.js from the book 
+		"WebGL Pro gramming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, 
+		and renamed it cuon-matrix-quat.js -->
+    <script src="./lib/cuon-matrix-quat03.js"></script> 
+	<!--	Finally, load in our own JavaScript program files:
+	-->
+	<script src="LatifDaniyal_ProjA_VBObox.js"></script>
+		<script src="CForcer02.js"></script>
+		<script src="CLimit02.js"></script>
+		<script src="PartSys06.js"></script>
+    <script src="PartSysBouncy14.js"></script>
+  </body>
+</html>
